@@ -1,0 +1,17 @@
+Go to parent File  or context file and create Context--->>
+
+export const exampleDataContext = createContext();
+
+const ComponentName =(props)=>{
+<exampleDataContext.proiver value={'Aman'}>
+{props.children}
+</exampleDataContext.proiver>
+}
+
+
+
+useContext in file where you want to use by --->>
+
+const data = useContext(exampleDataContext);     # data=aman #
+
+<h1>My name is {data}</h1>         #My name is Aman #
